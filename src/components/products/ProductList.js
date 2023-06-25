@@ -13,10 +13,11 @@ import * as productActions from "../../redux/actions/productActions";
 import * as cartActions from "../../redux/actions/cartActions";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { bindActionCreators } from "redux";
 
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 let style = { width: "19rem" };
 
@@ -71,6 +72,14 @@ class ProductList extends Component {
                 >
                   <FontAwesomeIcon icon={faCartShopping} />
                 </Button>
+                <Link to={"/saveproduct/" + product.id}><Button
+                  color="info"
+                  outline
+                  size="sm"
+                >
+                  <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </Button></Link>
+                
               </CardBody>
             </Card>
           ))}

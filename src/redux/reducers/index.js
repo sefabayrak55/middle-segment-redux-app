@@ -3,6 +3,7 @@ import changeCategoryReducer from "./changeCategoryReducer";
 import categoryListReducer from "./categoryListReducer";
 import productListReducer from "./productListReducer";
 import cartReducer from "./cartReducer";
+import saveProductReducer from "./saveProductReducer";
 
 const rootReducer = combineReducers({
     changeCategoryReducer,
@@ -11,8 +12,10 @@ const rootReducer = combineReducers({
     //categoryListReducer: categoryListReducer
     productListReducer,
     //productListReducer: productListReducer
-    cartReducer
+    cartReducer,
     //cartReducer:cartReducer
+    saveProductReducer
+    //saveProductReducer: saveProductReducer
 });
 
 export default rootReducer;
